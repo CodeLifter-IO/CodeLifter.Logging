@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageVersion>0.5</PackageVersion>
+    <Authors>Andrew Palmer, CodeLifterIO</Authors>
+    <Description>A nice clean logging package.  You can inherit from ILogger and add it to the collection of ILoggers inside the logRunner.
+
+Each log entry will show up in every log you add.
+
+See ConsoleLogger and DebugLogger for examples.</Description>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>CodeLifter.Logging</PackageId>
+    <License>https://github.com/CodeLifterIO/CodeLifter.Logging/blob/master/LICENSE</License>
+    <Owners>Andrew Palmer, CodeLifterIO</Owners>
+    <PackageProjectUrl>https://github.com/CodeLifterIO/CodeLifter.Logging</PackageProjectUrl>
+    <PackOnBuild>true</PackOnBuild>
+  </PropertyGroup>
+
+</Project>
