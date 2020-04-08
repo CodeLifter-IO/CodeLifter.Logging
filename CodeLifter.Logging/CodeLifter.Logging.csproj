@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.8</PackageVersion>
+    <PackageVersion>0.8.1</PackageVersion>
     <Authors>Andrew Palmer, CodeLifterIO</Authors>
     <Description>A nice clean logging package.  You can inherit from ILogger and add it to the collection of ILoggers inside the logRunner.
 
@@ -20,6 +20,7 @@ See ConsoleLogger and DebugLogger for examples.</Description>
     <PackageTags>Logging, Logger, Logs</PackageTags>
     <Summary>A nice easy multiLogger option</Summary>
     <Title>CodeLifter.Logging</Title>
+    <PackageLicenseUrl>https://github.com/CodeLifterIO/CodeLifter.Logging/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
 </Project>
