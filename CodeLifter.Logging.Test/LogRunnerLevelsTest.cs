@@ -9,7 +9,7 @@ namespace CodeLifter.Logging.Test
         [Fact]
         public void DebugStatusPrintsCorrectlyEvenWhenNoStatusGiven()
         {
-            ILogRunner logger = new Logger();
+            ILogRunner logger = new LogRunner();
             logger.AddLogger(new InMemoryLogger());
             logger.LogMessage("TEST");
 
@@ -20,7 +20,7 @@ namespace CodeLifter.Logging.Test
         [Fact]
         public void TraceStatusPrintsCorrectly()
         {
-            ILogRunner logger = new Logger();
+            ILogRunner logger = new LogRunner();
             logger.AddLogger(new InMemoryLogger());
             logger.LogMessage("TEST", LogLevels.Trace);
 
@@ -30,7 +30,7 @@ namespace CodeLifter.Logging.Test
         [Fact]
         public void DebugStatusPrintsCorrectly()
         {
-            ILogRunner logger = new Logger();
+            ILogRunner logger = new LogRunner();
             logger.AddLogger(new InMemoryLogger());
             logger.LogMessage("TEST", LogLevels.Debug);
 
@@ -40,7 +40,7 @@ namespace CodeLifter.Logging.Test
         [Fact]
         public void InfoStatusPrintsCorrectly()
         {
-            ILogRunner logger = new Logger();
+            ILogRunner logger = new LogRunner();
             logger.AddLogger(new InMemoryLogger());
             logger.LogMessage("TEST", LogLevels.Info);
 
@@ -50,7 +50,7 @@ namespace CodeLifter.Logging.Test
         [Fact]
         public void WarningStatusPrintsCorrectly()
         {
-            ILogRunner logger = new Logger();
+            ILogRunner logger = new LogRunner();
             logger.AddLogger(new InMemoryLogger());
             logger.LogMessage("TEST", LogLevels.Warning);
 
@@ -60,7 +60,7 @@ namespace CodeLifter.Logging.Test
         [Fact]
         public void ErrortatusPrintsCorrectly()
         {
-            ILogRunner logger = new Logger();
+            ILogRunner logger = new LogRunner();
             logger.AddLogger(new InMemoryLogger());
             logger.LogMessage("TEST", LogLevels.Error);
 
@@ -70,7 +70,7 @@ namespace CodeLifter.Logging.Test
         [Fact]
         public void FataltatusPrintsCorrectly()
         {
-            ILogRunner logger = new Logger();
+            ILogRunner logger = new LogRunner();
             logger.AddLogger(new InMemoryLogger());
             logger.LogMessage("TEST", LogLevels.Fatal);
 
@@ -80,7 +80,7 @@ namespace CodeLifter.Logging.Test
         [Fact]
         public void EachLogOnlyLogsAnEntryOnce()
         {
-            ILogRunner logger = new Logger();
+            ILogRunner logger = new LogRunner();
             logger.AddLogger(new InMemoryLogger());
             logger.AddLogger(new InMemoryLogger());
             logger.AddLogger(new InMemoryLogger());
@@ -95,7 +95,7 @@ namespace CodeLifter.Logging.Test
         [Fact]
         public void MultipleLogTypesCanBeAdded()
         {
-            ILogRunner logger = new Logger();
+            ILogRunner logger = new LogRunner();
             logger.AddLogger(new InMemoryLogger());
             logger.AddLogger(new ConsoleLogger());
 
@@ -105,7 +105,7 @@ namespace CodeLifter.Logging.Test
         [Fact]
         public void ASingleLogCannotBeAddedMultipleTimes()
         {
-            ILogRunner logger = new Logger();
+            ILogRunner logger = new LogRunner();
             InMemoryLogger inMemLog = new InMemoryLogger();
             ConsoleLogger consoleLogger = new ConsoleLogger();
             logger.AddLogger(inMemLog);

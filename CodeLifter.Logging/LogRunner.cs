@@ -6,11 +6,11 @@ using CodeLifter.Logging.Loggers;
 
 namespace CodeLifter.Logging
 {
-    public class Logger : ILogRunner
+    public class LogRunner : ILogRunner
     {
         public List<ILogger> Loggers { get; private set; }
 
-        public Logger()
+        public LogRunner()
         {
             Loggers = new List<ILogger>();
         }

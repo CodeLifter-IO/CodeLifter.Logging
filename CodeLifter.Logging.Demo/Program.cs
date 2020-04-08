@@ -6,7 +6,7 @@ namespace CodeLifter.Logging.Demo
     {
         static void Main(string[] args)
         {
-            ILogRunner logger = new Logger();
+            ILogRunner logger = new LogRunner();
             logger.AddLogger(new ConsoleLogger());
             logger.AddLogger(new DebugLogger());
             logger.AddLogger(new InMemoryLogger());
