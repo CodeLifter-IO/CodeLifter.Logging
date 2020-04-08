@@ -30,3 +30,7 @@ namespace CodeLifter.Logging.Demo
 
 
 ```
+
+Here is what the console logger can produce!
+
+![Image of ConsoleLogger output.](https://github.com/CodeLifterIO/CodeLifter.Logging/blob/master/LogDemoScreen.png?raw=true)
