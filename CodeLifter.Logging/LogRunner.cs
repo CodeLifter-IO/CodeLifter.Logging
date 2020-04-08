@@ -8,7 +8,7 @@ namespace CodeLifter.Logging
 {
     public class Logger : ILogRunner
     {
-        private List<ILogger> Loggers;
+        public List<ILogger> Loggers { get; private set; }
 
         public Logger()
         {
@@ -17,22 +17,29 @@ namespace CodeLifter.Logging
 
         public void AddLogger(ILogger logger)
         {
-            Loggers.Add(logger);
+            if(!Loggers.Contains(logger))
+            {
+                Loggers.Add(logger);
+            }
         }
 
-        public void LogMessage(string infoMessage, LogLevels level = LogLevels.Trace)
+        public void LogMessage(string infoMessage, LogLevels level = LogLevels.Info)
         {
             PrintToAllEnabledLogs(infoMessage, level);
         }
 
-        public void PrintToAllEnabledLogs(string infoMessage, LogLevels level = LogLevels.Trace)
+        private void PrintToAllEnabledLogs(string infoMessage, LogLevels level = LogLevels.Info)
         {
-            infoMessage = $"*** {level} {DateTime.Now} *** {infoMessage}";
+            infoMessage = $"*** {ConvertLevelForLog(level)} *** {DateTime.Now} - {infoMessage}";
             foreach(ILogger log in Loggers)
             {
                 log.LogEntry(infoMessage, level);
             }
         }
 
+        private string ConvertLevelForLog(LogLevels level)
+        {
+            return level.ToString().ToUpper().PadRight(7, ' ');
+        }
     }
 }

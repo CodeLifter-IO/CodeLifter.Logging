@@ -3,23 +3,23 @@ namespace CodeLifter.Logging.Loggers
 {
     public class ConsoleLogger : ILogger
     {
-        public void LogEntry(string message, LogLevels level = LogLevels.Trace)
+        public void LogEntry(string message, LogLevels level = LogLevels.Debug)
         {
             switch (level)
             {
-                case LogLevels.Trace:
+                case LogLevels.Debug:
                     Console.ResetColor();
                     break;
-                case LogLevels.Alert:
+                case LogLevels.Info:
                     Console.ForegroundColor = ConsoleColor.Blue;
                     break;
-                case LogLevels.Exception:
+                case LogLevels.Warning:
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     break;
                 case LogLevels.Error:
                     Console.ForegroundColor = ConsoleColor.DarkRed;
                     break;
-                case LogLevels.Critical:
+                case LogLevels.Fatal:
                     Console.ForegroundColor = ConsoleColor.Red;
                     break;
                 default:

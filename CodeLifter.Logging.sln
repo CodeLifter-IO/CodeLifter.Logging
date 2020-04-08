@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeLifter.Logging.Test", "CodeLifter.Logging.Test\CodeLifter.Logging.Test.csproj", "{6B8BCB32-7700-4961-AAED-D7F956433B47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,5 +28,9 @@ Global
 		{F9F1B645-53EE-4A84-864C-55E838431F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9F1B645-53EE-4A84-864C-55E838431F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9F1B645-53EE-4A84-864C-55E838431F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B8BCB32-7700-4961-AAED-D7F956433B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B8BCB32-7700-4961-AAED-D7F956433B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B8BCB32-7700-4961-AAED-D7F956433B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B8BCB32-7700-4961-AAED-D7F956433B47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

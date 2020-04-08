@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.5</PackageVersion>
+    <PackageVersion>0.8</PackageVersion>
     <Authors>Andrew Palmer, CodeLifterIO</Authors>
     <Description>A nice clean logging package.  You can inherit from ILogger and add it to the collection of ILoggers inside the logRunner.
 
@@ -15,6 +15,11 @@ See ConsoleLogger and DebugLogger for examples.</Description>
     <Owners>Andrew Palmer, CodeLifterIO</Owners>
     <PackageProjectUrl>https://github.com/CodeLifterIO/CodeLifter.Logging</PackageProjectUrl>
     <PackOnBuild>true</PackOnBuild>
+    <PackageReleaseNotes>--prevent adding the same logger twice
+--added unit tests</PackageReleaseNotes>
+    <PackageTags>Logging, Logger, Logs</PackageTags>
+    <Summary>A nice easy multiLogger option</Summary>
+    <Title>CodeLifter.Logging</Title>
   </PropertyGroup>
 
 </Project>

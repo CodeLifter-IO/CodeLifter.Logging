@@ -1,5 +1,4 @@
-﻿using System;
-using CodeLifter.Logging.Loggers;
+﻿using CodeLifter.Logging.Loggers;
 
 namespace CodeLifter.Logging.Demo
 {
@@ -10,12 +9,13 @@ namespace CodeLifter.Logging.Demo
             ILogRunner logger = new Logger();
             logger.AddLogger(new ConsoleLogger());
             logger.AddLogger(new DebugLogger());
+            logger.AddLogger(new InMemoryLogger());
 
-            logger.LogMessage("TRACE", LogLevels.Trace);
-            logger.LogMessage("EXCEPTION", LogLevels.Exception);
+            logger.LogMessage("DEBUG", LogLevels.Debug);
+            logger.LogMessage("INFO", LogLevels.Info);
+            logger.LogMessage("WARNING", LogLevels.Warning);
             logger.LogMessage("ERROR", LogLevels.Error);
-            logger.LogMessage("CRITICAL", LogLevels.Critical);
-            logger.LogMessage("ALERT", LogLevels.Alert);
+            logger.LogMessage("FATAL", LogLevels.Fatal);
             logger.LogMessage("TRACE");
         }
     }

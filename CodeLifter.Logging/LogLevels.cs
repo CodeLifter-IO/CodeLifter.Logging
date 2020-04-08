@@ -3,10 +3,11 @@ namespace CodeLifter.Logging
 {
     public enum LogLevels
     {
-        Trace,   // Default
-        Alert,   // blue
-        Exception,   // yellow
+        Trace,   //Default
+        Debug,   // Default
+        Info,   // blue
+        Warning,   // yellow
         Error,    //Dark Red
-        Critical // Red
+        Fatal // Red
     }
 }
