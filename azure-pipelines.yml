@@ -32,13 +32,13 @@ steps:
     nobuild: true
     versioningScheme: 'off'
 
-# - task: NuGetCommand@2
-#   displayName: 'nuget push'
-#   inputs:
-#     command: 'push'
-#     feedsToUse: 'select'
-#     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
-#     nuGetFeedType: 'internal'
-#     publishVstsFeed: 'TestFeed'
-#     versioningScheme: 'off'
-#     allowPackageConflicts: true
+- task: NuGetCommand@2
+  displayName: 'nuget push'
+  inputs:
+    command: 'push'
+    feedsToUse: 'select'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: 'CodeLifter.Feed'
+    versioningScheme: 'off'
+    allowPackageConflicts: true
